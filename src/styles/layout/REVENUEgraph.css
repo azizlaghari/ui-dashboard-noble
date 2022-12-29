@@ -1,7 +1,13 @@
-
+.Revenue{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.revenue_Section{
+  flex: 1;
+}
 .Revenue_discp {
   padding-bottom: 2rem;
-  display: flex;
 }
 .groupBtn {
   padding-bottom: 2rem;
@@ -55,16 +61,17 @@
 
 }
 .inbox_projects{
-  margin: 2rem 1rem 2rem 1rem;
+  margin: 2rem 1rem 5rem 1rem;
 
 }
 .inbox_projects p .INBOX{
-  padding: 2rem 0 1rem 0;
+  padding: 2rem 0rem 5rem 0rem;
 }
 .title_doted{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 /* .INBOX{
   flex: 1;

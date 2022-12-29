@@ -73,29 +73,39 @@ const REVENUEgraph = () => {
         <div className="REVENUE_graph">
             <div className="site-card-border-less-wrapper">
                 <Card
-                    title="REVENUE"
+                    // title="REVENUE"
                     bordered={false}
                     style={{
                         width: 1100,
                     }}
 
                 >
-                    <p className="Revenue_discp">Revenue is the income that a business has from its normal business activities, usually from the sale <br /> of goods and services to customers.</p>
-                    <div className="groupBtn">
-                        <Radio.Group
-                            onChange={onChange}
-                            defaultValue="a"
-                            style={{
-                                marginTop: 16,
-                            }}
-                        >
-                            <Radio.Group onChange={onChange} defaultValue="c">
-                                <Radio.Button value="a">Today</Radio.Button>
-                                <Radio.Button value="b">Week</Radio.Button>
-                                <Radio.Button type="primary" value="c">Month</Radio.Button>
-                                <Radio.Button value="d">Year</Radio.Button>
+                    <div className="title_doted">
+                        <h4 className="INBOX">REVENUE</h4>
+                        <div className="doted">
+                            <BiDotsHorizontalRounded />
+                        </div>
+                    </div>
+                    <div className="Revenue">
+                        <div className="revenue_Section">
+                            <p className="Revenue_discp">Revenue is the income that a business has from its normal business activities, usually from the sale of goods and services to customers.</p>
+                        </div>
+                        <div className="groupBtn revenue_Section">
+                            <Radio.Group
+                                onChange={onChange}
+                                defaultValue="a"
+                                style={{
+                                    marginTop: 16,
+                                }}
+                            >
+                                <Radio.Group onChange={onChange} defaultValue="c">
+                                    <Radio.Button value="a">Today</Radio.Button>
+                                    <Radio.Button value="b">Week</Radio.Button>
+                                    <Radio.Button type="primary" value="c">Month</Radio.Button>
+                                    <Radio.Button value="d">Year</Radio.Button>
+                                </Radio.Group>
                             </Radio.Group>
-                        </Radio.Group>
+                        </div>
                     </div>
                     <Line {...config} />
                 </Card>
@@ -104,13 +114,19 @@ const REVENUEgraph = () => {
                 <div className="MONTHLY_SALES_graph graph_">
                     {/* <div className="site-card-border-less-wrapper"> */}
                     <Card
-                        title="MONTHLY SALES"
+                        // title="MONTHLY SALES"
                         bordered={false}
                         style={{
                             width: 700,
                             height: 600,
                         }}
                     >
+                        <div className="title_doted">
+                            <h4 className="INBOX">MONTHLY SALES</h4>
+                            <div className="doted">
+                                <BiDotsHorizontalRounded />
+                            </div>
+                        </div>
                         <p className="Revenue_discp">Sales are activities related to selling or the number of goods or services sold in a given time period.</p>
                         <Line {...config} />;
                     </Card>
