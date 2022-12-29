@@ -1,0 +1,98 @@
+* {
+  /* border: 1px dotted red; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.sider {
+  height: 100vh;
+  background-color: #0c1427;
+}
+.sider:where(.css-dev-only-do-not-override-9ntgx0).ant-menu-dark:not(
+    .ant-menu-horizontal
+  )
+  .ant-menu-item-selected {
+  background-color: transparent;
+  color: #6571ff;
+}
+.anticon svg {
+  color: #fff;
+  display: inline-block;
+}
+.trigger {
+  margin: 30px;
+  margin-right: 80px;
+  float: left;
+  color: #fff;
+}
+.ant-space-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-right: 22px;
+}
+.ant-menu-item .ant-menu-item-only-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Welcom post */
+.db{
+    display: flex;
+    width: 100%;
+}
+.welcome{
+    /* flex: 1; */
+    width: 63%;
+}
+.leftbt{
+    width: 50%;
+    margin: 40px 30px;
+    margin-left: 0px;
+}
+.welcome h2 {
+  margin: 40px 30px;
+}
+
+/* datePicker */
+.datePicker{
+    border: 1px solid #6571ff;
+}
+.ant-picker{
+    background-color: transparent;
+    border: 2px solid #6571ff;
+    flex-direction: row-reverse;
+
+}
+.anticon svg{
+    fill: #6571ff;
+    flex-direction: row-reverse;
+}
+.ant-picker .ant-picker-input{
+    flex-direction: row-reverse;
+}
+.ant-picker .ant-picker-input >input{
+    padding-left: 1rem;
+}
+.printBtn{
+    border: 2px solid #6571ff;
+    background: transparent;
+    color: #6571ff;
+}
+.leftbt button{
+    margin-left: 10px;
+
+}
+.reportBtn{
+    border: 2px solid #6571ff;
+    background: #6571ff;
+    color: #fff;
+    margin-right: 50px;
+}
+.reportBtn:hover{
+    background-color: #6572ffa5;
+    color: #fff;
+}
+.leftbt button{
+    margin-left: 10px;
+}

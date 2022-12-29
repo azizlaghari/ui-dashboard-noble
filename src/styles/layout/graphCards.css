@@ -1,0 +1,52 @@
+*{
+    /* border: 1px dotted red; */
+}
+.container {
+  width: 70%;
+  margin: 10px 0 0 30px ;
+  display: flex;
+  justify-content: space-between;
+}
+.cards{
+    width: 100%;
+    flex: 1;
+    margin-right: 2rem;
+}
+.price {
+  font-size: 25px;
+}
+.priceUpDown {
+  color: green;
+}
+.firstCard{
+    width: 100%;
+    display: flex;
+}
+.amounts{
+    flex: 1;
+    width: 30% !important;
+}
+.graph{
+    width: 60%;
+    flex-direction: row-reverse;
+}
+.priceUpDownORDERS{
+    color: red;
+}
+.dotedMenu{
+    flex-direction: row-reverse;
+}
+.priceORDERS{
+    font-size: 25px;
+}
+.secondCard{
+    display: flex;
+}
+.amounts{
+    flex: 1;
+    width: 30%!important;
+
+}
+.priceUpORDERS{
+    color: green;
+}

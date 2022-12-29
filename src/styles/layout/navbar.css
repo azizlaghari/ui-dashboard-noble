@@ -1,0 +1,58 @@
+
+/* *{
+    border: 1px dotted red;
+} */
+/* .navbar_{
+    width: 100%;
+} */
+.ant-input {
+  border: none;
+  width: 70%;
+}
+.searchIcon {
+  color: gray;
+  margin-left: 12px;
+}
+/* .serach{
+    width: 70%;
+}
+.leftIcons{
+    width: 70%;
+} */
+.languageDropdown{
+    border: none;
+}
+/* .ant-btn-default{
+    border: none;
+    background: none;
+} */
+.boxesIcon{
+    font-size: 20px;
+    margin-right: 10px;
+
+}
+.emailIcon{
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.bellIcon{
+    font-size: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.badgeDot{
+    position: relative;
+    bottom: 20px;
+}
+.bellIcon{
+    position: absolute;
+    top: -3px;
+}
+.ant-badge .ant-badge-dot{
+    top: 3.5;
+    left: 10px;
+    padding: 5px;
+    bottom: 2px;
+    background-color: #6571ff;
+}
