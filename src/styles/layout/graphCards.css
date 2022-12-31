@@ -10,7 +10,7 @@
 .cards{
     width: 100%;
     flex: 1;
-    margin-right: 2rem;
+    margin-right: 1.5rem;
 }
 .price {
   font-size: 25px;

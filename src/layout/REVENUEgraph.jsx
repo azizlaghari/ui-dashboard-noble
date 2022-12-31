@@ -1,39 +1,39 @@
 import { Line, RingProgress } from "@ant-design/charts";
-import { Button, Card, Radio, Space } from "antd";
+import { Button, Card, Modal, Radio, Space } from "antd";
 import React, { useEffect, useState } from "react";
-import '../styles/layout/REVENUEgraph.css';
-import { Avatar, List, message } from 'antd';
-import VirtualList from 'rc-virtual-list';
+import "../styles/layout/REVENUEgraph.css";
+import { Avatar, List, message } from "antd";
+import VirtualList from "rc-virtual-list";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
 import { Table, Tag } from "antd/es";
 
 const project_columns = [
     {
-        title: 'Name',
-        dataIndex: 'name',
-        key: 'name',
+        title: "Name",
+        dataIndex: "name",
+        key: "name",
         render: (text) => <a>{text}</a>,
     },
     {
-        title: 'Age',
-        dataIndex: 'age',
-        key: 'age',
+        title: "Age",
+        dataIndex: "age",
+        key: "age",
     },
     {
-        title: 'Address',
-        dataIndex: 'address',
-        key: 'address',
+        title: "Address",
+        dataIndex: "address",
+        key: "address",
     },
     {
-        title: 'Tags',
-        key: 'tags',
-        dataIndex: 'tags',
+        title: "Tags",
+        key: "tags",
+        dataIndex: "tags",
         render: (_, { tags }) => (
             <>
                 {tags.map((tag) => {
-                    let color = tag.length > 5 ? 'geekblue' : 'green';
-                    if (tag === 'loser') {
-                        color = 'volcano';
+                    let color = tag.length > 5 ? "geekblue" : "green";
+                    if (tag === "loser") {
+                        color = "volcano";
                     }
                     return (
                         <Tag color={color} key={tag}>
@@ -45,8 +45,8 @@ const project_columns = [
         ),
     },
     {
-        title: 'Action',
-        key: 'action',
+        title: "Action",
+        key: "action",
         render: (_, record) => (
             <Space size="middle">
                 <a>Invite {record.name}</a>
@@ -57,34 +57,32 @@ const project_columns = [
 ];
 const project_data = [
     {
-        key: '1',
-        name: 'John Brown',
+        key: "1",
+        name: "John Brown",
         age: 32,
-        address: 'New York No. 1 Lake Park',
-        tags: ['nice', 'developer'],
+        address: "New York No. 1 Lake Park",
+        tags: ["nice", "developer"],
     },
     {
-        key: '2',
-        name: 'Jim Green',
+        key: "2",
+        name: "Jim Green",
         age: 42,
-        address: 'London No. 1 Lake Park',
-        tags: ['loser'],
+        address: "London No. 1 Lake Park",
+        tags: ["loser"],
     },
     {
-        key: '3',
-        name: 'Joe Black',
+        key: "3",
+        name: "Joe Black",
         age: 32,
-        address: 'Sidney No. 1 Lake Park',
-        tags: ['cool', 'teacher'],
+        address: "Sidney No. 1 Lake Park",
+        tags: ["cool", "teacher"],
     },
 ];
 const fakeDataUrl =
-    'https://randomuser.me/api/?results=20&inc=name,gender,email,nat,picture&noinfo';
+    "https://randomuser.me/api/?results=20&inc=name,gender,email,nat,picture&noinfo";
 const ContainerHeight = 400;
 
-
 const REVENUEgraph = () => {
-
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -92,18 +90,20 @@ const REVENUEgraph = () => {
     }, []);
 
     const asyncFetch = () => {
-        fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json')
+        fetch(
+            "https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json"
+        )
             .then((response) => response.json())
             .then((json) => setData(json))
             .catch((error) => {
-                console.log('fetch data failed', error);
+                console.log("fetch data failed", error);
             });
     };
     const config = {
         data,
-        padding: 'auto',
-        xField: 'Date',
-        yField: 'scales',
+        padding: "auto",
+        xField: "Date",
+        yField: "scales",
         xAxis: {
             // type: 'timeCat',
             tickCount: 5,
@@ -115,12 +115,12 @@ const REVENUEgraph = () => {
     };
 
     const progress_config = {
-        label: 'lebal',
+        label: "lebal",
         height: 100,
         width: 100,
         autoFit: false,
         percent: 0.7,
-        color: ['#5B8FF9', '#E8EDF3'],
+        color: ["#5B8FF9", "#E8EDF3"],
     };
 
     // index
@@ -141,6 +141,17 @@ const REVENUEgraph = () => {
     //         appendData();
     //     }
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
+    const handleOk = () => {
+        setIsModalOpen(false);
+    };
+    const handleCancel = () => {
+        setIsModalOpen(false);
+    };
+
     return (
         <div className="REVENUE_graph">
             <div className="site-card-border-less-wrapper">
@@ -150,17 +161,32 @@ const REVENUEgraph = () => {
                     style={{
                         width: 1100,
                     }}
-
                 >
                     <div className="title_doted">
                         <h4 className="INBOX">REVENUE</h4>
                         <div className="doted">
-                            <BiDotsHorizontalRounded />
+                        <span onClick={showModal}>
+                                    <BiDotsHorizontalRounded />
+                                </span>
+                                <Modal
+                                    title="Menu"
+                                    open={isModalOpen}
+                                    onOk={handleOk}
+                                    onCancel={handleCancel}
+                                >
+                                    <p>Edit</p>
+                                    <p>Delete</p>
+                                    <p>Update</p>
+                                </Modal>ٖ
                         </div>
                     </div>
                     <div className="Revenue">
                         <div className="revenue_Section">
-                            <p className="Revenue_discp">Revenue is the income that a business has from its normal business activities, usually from the sale of goods and services to customers.</p>
+                            <p className="Revenue_discp">
+                                Revenue is the income that a business has from its normal
+                                business activities, usually from the sale of goods and services
+                                to customers.
+                            </p>
                         </div>
                         <div className="groupBtn revenue_Section">
                             <Radio.Group
@@ -173,7 +199,9 @@ const REVENUEgraph = () => {
                                 <Radio.Group onChange={onChange} defaultValue="c">
                                     <Radio.Button value="a">Today</Radio.Button>
                                     <Radio.Button value="b">Week</Radio.Button>
-                                    <Radio.Button type="primary" value="c">Month</Radio.Button>
+                                    <Radio.Button type="primary" value="c">
+                                        Month
+                                    </Radio.Button>
                                     <Radio.Button value="d">Year</Radio.Button>
                                 </Radio.Group>
                             </Radio.Group>
@@ -196,10 +224,25 @@ const REVENUEgraph = () => {
                         <div className="title_doted">
                             <h4 className="INBOX">MONTHLY SALES</h4>
                             <div className="doted">
-                                <BiDotsHorizontalRounded />
+                                <span onClick={showModal}>
+                                    <BiDotsHorizontalRounded />
+                                </span>
+                                <Modal
+                                    title="Menu"
+                                    open={isModalOpen}
+                                    onOk={handleOk}
+                                    onCancel={handleCancel}
+                                >
+                                    <p>Edit</p>
+                                    <p>Delete</p>
+                                    <p>Update</p>
+                                </Modal>
                             </div>
                         </div>
-                        <p className="Revenue_discp">Sales are activities related to selling or the number of goods or services sold in a given time period.</p>
+                        <p className="Revenue_discp">
+                            Sales are activities related to selling or the number of goods or
+                            services sold in a given time period.
+                        </p>
                         <Line {...config} />;
                     </Card>
                     {/* </div> */}
@@ -214,7 +257,6 @@ const REVENUEgraph = () => {
                         style={{
                             width: 300,
                             height: 600,
-
                         }}
                     >
                         <div className="title_doted">
@@ -228,10 +270,12 @@ const REVENUEgraph = () => {
                         <Space
                             direction="vertical"
                             style={{
-                                width: '100%',
-                                paddingTop: '20px',
+                                width: "100%",
+                                paddingTop: "20px",
                             }}
-                        >   <label className="Total">Total storage </label>
+                        >
+                            {" "}
+                            <label className="Total">Total storage </label>
                             <span class="p-1 ms-1 rounded-circle bg-secondary"></span>
                             <label className="Uesd">Used storage </label>
                             <span class="p-1 me-1 rounded-circle bg-primary"></span>
@@ -239,17 +283,15 @@ const REVENUEgraph = () => {
                                 Upgrade Storage Data
                             </Button>
                         </Space>
-
                     </Card>
                     {/* </div> */}
                 </div>
-
             </div>
             <div className="inbox_projects">
                 <div className="inbox last_boxes">
-                    <Card
-                        style={{ width: '80%', height: '100%' }}
-                    >   <div className="title_doted">
+                    <Card style={{ width: "80%", height: "100%" }}>
+                        {" "}
+                        <div className="title_doted">
                             <h4 className="INBOX">INBOX</h4>
                             <div className="doted">
                                 <BiDotsHorizontalRounded />
@@ -277,12 +319,10 @@ const REVENUEgraph = () => {
                             </VirtualList>
                         </List>
                     </Card>
-                </div>ٖ
-
+                </div>
+                ٖ
                 <div className="project_List last_boxes">
-                    <Card
-                        style={{ width: '100%' }}
-                    >
+                    <Card style={{ width: "100%" }}>
                         <div className="title_doted">
                             <h4 className="INBOX">EMPOYLEES</h4>
                             <div className="doted">

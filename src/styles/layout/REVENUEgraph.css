@@ -1,17 +1,20 @@
 .Revenue {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  width: 100%;
+  margin: 2rem 1rem 2rem 1rem;
+
 }
 .revenue_Section {
   flex: 1;
 }
 .Revenue_discp {
+  width: 160%;
   padding-bottom: 2rem;
 }
 .groupBtn {
+  width: 50%;
   padding-bottom: 2rem;
-  flex: 1;
+  margin-left: 26rem;
 }
 .RingProgress {
   display: flex;
@@ -44,19 +47,20 @@
   margin-left: 0.25rem !important;
 }
 .MONTHLY_STORAGE_graphs {
+  margin: 2rem 0rem 2rem -2rem;
   display: flex;
 }
 .graph_ {
   flex: 1;
 }
 .MONTHLY_SALES_graph {
-  margin: 2rem 1rem 2rem 1rem;
+  margin: 2rem 1rem 2rem 2rem;
 }
 .CLOUD_STORAGE_graph {
-  margin: 2rem 1rem 2rem 1rem;
+  margin: 2rem 0rem 2rem 1rem;
 }
 .REVENUE_graph {
-  margin: 2rem 1rem 2rem 1rem;
+  margin: 2rem 1rem 2rem 2rem;
 }
 .inbox_projects {
   margin: 2rem 1rem 5rem 1rem;

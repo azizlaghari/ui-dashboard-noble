@@ -1,4 +1,5 @@
-import { Badge, Button, Dropdown, Input } from 'antd';
+import { UserOutlined } from '@ant-design/icons';
+import { Avatar, Badge, Button, Dropdown, Image, Input } from 'antd';
 import React from 'react'
 import { AiOutlineBell } from 'react-icons/ai';
 import { BsBoundingBox, BsSearch } from 'react-icons/bs';
@@ -77,7 +78,7 @@ const Navbar = () => {
                     pointAtCenter: true,
                 }}
             >
-                <Button>English</Button>
+                <span>English</span>
             </Dropdown>
 
             <Dropdown
@@ -91,7 +92,7 @@ const Navbar = () => {
                 }}
             >
                 <>
-                    <Button><BsBoundingBox className='boxesIcon' /></Button>
+                    <span className='four_Boxes'><BsBoundingBox className='boxesIcon' /></span>
                 </>
             </Dropdown>
 
@@ -106,8 +107,8 @@ const Navbar = () => {
                     }}
                 />
             </Badge>
-        </div >
-    )
-}
+        </div>
+    );
+};
 
 export default Navbar
