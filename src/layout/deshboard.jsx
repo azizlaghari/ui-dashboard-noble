@@ -213,7 +213,7 @@ const Deshboard = () => {
                                     <span onClick={(e) => e.preventDefault()}>
                                         <Space>
                                             <BiAnchor />
-                                            Advanced UI
+                                            Ad UI
                                             <DownOutlined />
                                         </Space>
                                     </span>
