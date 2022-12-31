@@ -236,7 +236,7 @@ const REVENUEgraph = () => {
                             <label className="Uesd">Used storage </label>
                             <span class="p-1 me-1 rounded-circle bg-primary"></span>
                             <Button type="primary" block>
-                                Upgrade Storage
+                                Upgrade Storage Data
                             </Button>
                         </Space>
 
