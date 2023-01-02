@@ -96,3 +96,22 @@
 .leftbt button{
     margin-left: 10px;
 }
+/* Responsive Web Design Media Queries */
+
+@media only screen and (max-width: 425px) {
+    .db{
+      flex-direction: column;
+    }
+}
+@media only screen and (max-width: 425px) {
+  .leftbt {
+      display: flex;
+      flex-direction: column;
+  }
+  .datePicker, .printBtn, .reportBtn {
+      width: 100%;
+  }
+  .printBtn, .reportBtn {
+      margin-top: 15px;
+  }
+}

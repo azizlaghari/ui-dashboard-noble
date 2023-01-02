@@ -2,7 +2,6 @@
   display: flex;
   width: 100%;
   margin: 2rem 1rem 2rem 1rem;
-
 }
 .revenue_Section {
   flex: 1;
@@ -86,4 +85,45 @@
 }
 .ant-table-wrapper .ant-table-pagination.ant-pagination {
   display: none;
+}
+
+@media only screen and (max-width: 425px) {
+  .REVENUE_graph {
+    flex-direction: column;
+    width: 30%;
+  }
+  .site-card-border-less-wrapper {
+    width: 30%;
+    flex-direction: column;
+  }
+  .title_doted {
+    font-size: 0.875rem;
+  }
+  .Revenue {
+    font-size: 0.75rem;
+  }
+  .groupBtn {
+    margin-top: 8px;
+    margin-top: 8px;
+    padding: 0.25rem 0.5rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .site-card-border-less-wrapper {
+    width: 100px;
+  }
+
+  .title_doted {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Revenue {
+    flex-direction: column;
+  }
+
+  .groupBtn {
+    justify-content: center;
+  }
 }
