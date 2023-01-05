@@ -127,3 +127,12 @@
     justify-content: center;
   }
 }
+.RingProgress{
+  margin-top: 3rem;
+}
+.totalStorage{
+  display: flex;
+}
+.totalData{
+  flex: 1;
+}

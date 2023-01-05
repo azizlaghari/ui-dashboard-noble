@@ -260,11 +260,23 @@ const REVENUEgraph = () => {
                         }}
                     >
                         <div className="title_doted">
-                            <h4 className="INBOX">CLOUD STORAGE</h4>
-                            <div className="doted">
-                                <BiDotsHorizontalRounded />
-                            </div>
+                        <h4 className="INBOX">CLOUD STORAGE</h4>
+                        <div className="doted">
+                        <span onClick={showModal}>
+                                    <BiDotsHorizontalRounded />
+                                </span>
+                                <Modal
+                                    title="Menu"
+                                    open={isModalOpen}
+                                    onOk={handleOk}
+                                    onCancel={handleCancel}
+                                >
+                                    <p>Edit</p>
+                                    <p>Delete</p>
+                                    <p>Update</p>
+                                </Modal>ٖ
                         </div>
+                    </div>
 
                         <RingProgress className="RingProgress" {...progress_config} />
                         <Space
@@ -276,9 +288,9 @@ const REVENUEgraph = () => {
                         >
                             {" "}
                             <label className="Total">Total storage </label>
-                            <span class="p-1 ms-1 rounded-circle bg-secondary"></span>
+                            <span className="p-1 ms-1 rounded-circle bg-secondary"></span>
                             <label className="Uesd">Used storage </label>
-                            <span class="p-1 me-1 rounded-circle bg-primary"></span>
+                            <span className="p-1 me-1 rounded-circle bg-primary"></span>
                             <Button type="primary" block>
                                 Upgrade Storage Data
                             </Button>
@@ -294,7 +306,19 @@ const REVENUEgraph = () => {
                         <div className="title_doted">
                             <h4 className="INBOX">INBOX</h4>
                             <div className="doted">
-                                <BiDotsHorizontalRounded />
+                            <span onClick={showModal}>
+                                    <BiDotsHorizontalRounded />
+                                </span>
+                                <Modal
+                                    title="Menu"
+                                    open={isModalOpen}
+                                    onOk={handleOk}
+                                    onCancel={handleCancel}
+                                >
+                                    <p>Edit</p>
+                                    <p>Delete</p>
+                                    <p>Update</p>
+                                </Modal>
                             </div>
                         </div>
                         {/* <BiDotsHorizontalRounded /> */}
@@ -326,7 +350,19 @@ const REVENUEgraph = () => {
                         <div className="title_doted">
                             <h4 className="INBOX">EMPOYLEES</h4>
                             <div className="doted">
-                                <BiDotsHorizontalRounded />
+                            <span onClick={showModal}>
+                                    <BiDotsHorizontalRounded />
+                                </span>
+                                <Modal
+                                    title="Menu"
+                                    open={isModalOpen}
+                                    onOk={handleOk}
+                                    onCancel={handleCancel}
+                                >
+                                    <p>Edit</p>
+                                    <p>Delete</p>
+                                    <p>Update</p>
+                                </Modal>
                             </div>
                         </div>
                         <Table columns={project_columns} dataSource={project_data} />
