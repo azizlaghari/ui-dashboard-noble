@@ -8,8 +8,8 @@ import "../styles/layout/graphCards.css";
 const GraphCards = () => {
     // Line Graph
     const data = [
-        264, 997, 438, 887, 309, 897, 250, 875, 563, 430, 525, 592, 492, 467, 513,
-        546, 983, 340, 539, 243, 226, 192,
+        26, 197, 38, 127, 49, 197, 50, 175, 63, 230, 125, 92, 122, 267, 313,
+        546, 483, 340, 339, 443, 526, 692,
     ];
     const config = {
         height: 30,
@@ -18,16 +18,16 @@ const GraphCards = () => {
         smooth: true,
     };
     // GROWTH Graph
-    const GROWTH_data = [
-        264, 997, 438, 887, 309, 897, 250, 875, 563, 430, 525, 592, 492, 467, 513,
-        546, 983, 340, 539, 243, 226, 192,
-    ];
-    const GROWTH_config = {
-        height: 30,
-        autoFit: true,
-        GROWTH_data,
-        smooth: true,
-    };
+    // const GROWTH_data = [
+    //     264, 997, 438, 887, 309, 897, 250, 875, 563, 430, 525, 592, 492, 467, 513,
+    //     546, 983, 340, 539, 243, 226, 192,
+    // ];
+    // const GROWTH_config = {
+    //     height: 30,
+    //     autoFit: true,
+    //     GROWTH_data,
+    //     smooth: true,
+    // };
     return (
         <div className="container">
             <div className="cards">
