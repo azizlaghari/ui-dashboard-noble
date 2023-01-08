@@ -76,7 +76,7 @@
     }
   } */
 
-@media only screen and (max-width: 425px) {
+/* @media only screen and (max-width: 425px) {
   .navbar_ {
     display: flex;
     flex-direction: column;
@@ -108,4 +108,4 @@
   .badgeDot {
     font-size: 12px;
   }
-}
+} */

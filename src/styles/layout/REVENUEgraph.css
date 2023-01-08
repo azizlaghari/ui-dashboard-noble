@@ -87,7 +87,7 @@
   display: none;
 }
 
-@media only screen and (max-width: 425px) {
+/* @media only screen and (max-width: 425px) {
   .REVENUE_graph {
     flex-direction: column;
     width: 30%;
@@ -107,8 +107,8 @@
     margin-top: 8px;
     padding: 0.25rem 0.5rem;
   }
-}
-@media only screen and (max-width: 800px) {
+} */
+/* @media only screen and (max-width: 800px) {
   .site-card-border-less-wrapper {
     width: 100px;
   }
@@ -126,7 +126,7 @@
   .groupBtn {
     justify-content: center;
   }
-}
+} */
 .RingProgress{
   margin-top: 3rem;
 }

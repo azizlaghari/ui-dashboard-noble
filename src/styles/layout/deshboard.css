@@ -98,7 +98,7 @@
 }
 /* Responsive Web Design Media Queries */
 
-@media only screen and (max-width: 425px) {
+/* @media only screen and (max-width: 425px) {
     .db{
       flex-direction: column;
     }
@@ -114,4 +114,4 @@
   .printBtn, .reportBtn {
       margin-top: 15px;
   }
-}
+} */
