@@ -1,5 +1,4 @@
-import { UserOutlined } from '@ant-design/icons';
-import { Avatar, Badge, Button, Dropdown, Image, Input } from 'antd';
+import { Badge, Dropdown, Input } from 'antd';
 import React from 'react'
 import { AiOutlineBell } from 'react-icons/ai';
 import { BsBoundingBox, BsSearch } from 'react-icons/bs';
