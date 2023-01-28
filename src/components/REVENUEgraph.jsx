@@ -7,6 +7,7 @@ import VirtualList from "rc-virtual-list";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
 import { Table, Tag } from "antd/es";
 
+// employees data box start
 const project_columns = [
     {
         title: "Name",
@@ -78,9 +79,14 @@ const project_data = [
         tags: ["cool", "teacher"],
     },
 ];
+// employees data box end
+
+// INBOX data box start********************************
 const fakeDataUrl =
     "https://randomuser.me/api/?results=20&inc=name,gender,email,nat,picture&noinfo";
 const ContainerHeight = 400;
+// INBOX data box end********************************
+
 
 const REVENUEgraph = () => {
     const [data, setData] = useState([]);
@@ -141,6 +147,7 @@ const REVENUEgraph = () => {
     //         appendData();
     //     }
 
+    // ******************************** Doted Modal ******************************** 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const showModal = () => {
         setIsModalOpen(true);
@@ -165,19 +172,19 @@ const REVENUEgraph = () => {
                     <div className="title_doted">
                         <h4 className="INBOX">REVENUE</h4>
                         <div className="doted">
-                        <span onClick={showModal}>
-                                    <BiDotsHorizontalRounded />
-                                </span>
-                                <Modal
-                                    title="Menu"
-                                    open={isModalOpen}
-                                    onOk={handleOk}
-                                    onCancel={handleCancel}
-                                >
-                                    <p>Edit</p>
-                                    <p>Delete</p>
-                                    <p>Update</p>
-                                </Modal>ٖ
+                            <span onClick={showModal}>
+                                <BiDotsHorizontalRounded />
+                            </span>
+                            <Modal
+                                title="Menu"
+                                open={isModalOpen}
+                                onOk={handleOk}
+                                onCancel={handleCancel}
+                            >
+                                <p>Edit</p>
+                                <p>Delete</p>
+                                <p>Update</p>
+                            </Modal>ٖ
                         </div>
                     </div>
                     <div className="Revenue">
@@ -247,6 +254,7 @@ const REVENUEgraph = () => {
                     </Card>
                     {/* </div> */}
                 </div>
+            {/* ********************* CLOUD_STORAGE_graph start **************************** */}
                 <div className="CLOUD_STORAGE_graph graphs_1">
                     {/* <div className="site-card-border-less-wrapper"> */}
                     <Card
@@ -260,9 +268,9 @@ const REVENUEgraph = () => {
                         }}
                     >
                         <div className="title_doted">
-                        <h4 className="INBOX">CLOUD STORAGE</h4>
-                        <div className="doted">
-                        <span onClick={showModal}>
+                            <h4 className="INBOX">CLOUD STORAGE</h4>
+                            <div className="doted">
+                                <span onClick={showModal}>
                                     <BiDotsHorizontalRounded />
                                 </span>
                                 <Modal
@@ -275,8 +283,8 @@ const REVENUEgraph = () => {
                                     <p>Delete</p>
                                     <p>Update</p>
                                 </Modal>ٖ
+                            </div>
                         </div>
-                    </div>
 
                         <RingProgress className="RingProgress" {...progress_config} />
                         <Space
@@ -299,6 +307,7 @@ const REVENUEgraph = () => {
                     {/* </div> */}
                 </div>
             </div>
+            {/* ******************************** inbox start **************************** */}
             <div className="inbox_projects">
                 <div className="inbox last_boxes">
                     <Card style={{ width: "80%", height: "100%" }}>
@@ -306,7 +315,7 @@ const REVENUEgraph = () => {
                         <div className="title_doted">
                             <h4 className="INBOX">INBOX</h4>
                             <div className="doted">
-                            <span onClick={showModal}>
+                                <span onClick={showModal}>
                                     <BiDotsHorizontalRounded />
                                 </span>
                                 <Modal
@@ -344,13 +353,14 @@ const REVENUEgraph = () => {
                         </List>
                     </Card>
                 </div>
-                ٖ
+                {/* ******************************** inbox end **************************** */}
+
                 <div className="project_List last_boxes">
                     <Card style={{ width: "100%" }}>
                         <div className="title_doted">
                             <h4 className="INBOX">EMPOYLEES</h4>
                             <div className="doted">
-                            <span onClick={showModal}>
+                                <span onClick={showModal}>
                                     <BiDotsHorizontalRounded />
                                 </span>
                                 <Modal
